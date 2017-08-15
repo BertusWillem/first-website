@@ -1,13 +1,36 @@
 body
 {
+  z-index: 1;
   background: #111;
   font-family: 'Roboto', sans-serif;
   padding: 0;
   margin: 0;
-  max-width: 1024px;
+  max-width: 100%;
   min-width: 512px;
   margin-left: auto;
   margin-right: auto;
+}
+
+#home
+{
+  height: 100vh;
+}
+
+#home .container
+{
+  background: url(https://eyesofodysseus.files.wordpress.com/2013/04/realm-of-flowers.jpg) no-repeat center top;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  padding: 0;
+}
+
+div, section
+{
+  display: block;
 }
 
 h1, h2
@@ -20,11 +43,12 @@ h1, h2
 
 ul
 {
+  z-index: 100;
   list-style-type: none;
   margin: 0;
-  margin-top: 30px;
   padding: 0;
-  position: relative;
+  position: fixed;
+  width: 100%;
   overflow: hidden;
   background-color: #151A1B;
   box-shadow: 0px 1px 0px black;
@@ -32,12 +56,15 @@ ul
 
 li
 {
+  z-index: 100;
+  position: sticky;
   float:left;
   width: 33.333%;
 }
 
 li a
 {
+  z-index: 100;
   display: block;
   color: white;
   text-align: center;
@@ -56,52 +83,64 @@ li a:hover
   background-color: #BA4138;
 }
 
-.profile img
+#profile
 {
-  float: left;
-  margin-top: 11px;
-  width: 80px;
+  width: 100%;
   height: 80px;
 }
 
-.profile h1
+.centertext
+{
+  z-index: 50;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+#profile h1
 {
   color: white;
-  margin: 0;
-  margin-left: 95px;
-  margin-top: 23px;
+  text-align: center;
+  text-shadow: 0px 0px 10px #000;
   position: relative;
   font-size: 45px;
 }
 
-.profile h2
+#profile h2
 {
   color: white;
-  margin: 0;
-  margin-top: 12px;
-  margin-left: 95px;
+  text-align: center;
+  text-shadow: 0px 0px 5px #000;
   position: relative;
   font-size: 20px;
 }
 
-.header
+#body-container
 {
-  background-color: grey;
-  height: auto;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.body-container
-{
-  background: #DAD5C8;
-  padding: 15px;
+  background-color: #FFFFFF;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 20px;
   height: 100%;
+  width: 100%;
   overflow: auto;
 }
 
-.user-text
+#body
+{
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  max-width: 1024px;
+  min-width: 512px;
+}
+
+#body .user-text
 {
   display: inline-block;
   vertical-align: top;
@@ -110,26 +149,28 @@ li a:hover
   width: 60%;
 }
 
-.user-image
+#body .user-image
 {
   display: inline-block;
   vertical-align: top;
   float: right;
-  margin-top: 54px;
+  margin-top: 25px;
   max-width: 38%;
 }
 
-.footer
+footer
 {
   background: #151A1B;
+  width: 100%;
   padding: 15px;
   text-align: center;
   position: relative;
   color: white;
+  bottom: 0;
   box-shadow: 0px 1px 0px black;
 }
 
-.footer a
+footer a
 {
   text-decoration: none;
 }
@@ -139,25 +180,26 @@ li a:hover
   color: #BA4138;
 }
 
-@media screen and (max-width: 750px)
+@media screen and (max-width: 800px)
 {
-  .header
-  {
-    display: none;
-  }
-
-  .body-container
+  #body-container
   {
     height: 50%;
   }
 
-  .user-text
+  #body .user-text
   {
     width: 100%;
   }
 
-  .user-image { display: inline-block; vertical-align: 0; float: none;
-  margin-top: 0; max-width: 100%; }
+  #body .user-image
+  {
+    display: inline-block;
+    vertical-align: 0;
+    float: left;
+    margin: 0;
+    max-width: 100%;
+  }
 
   li
   {
@@ -169,60 +211,54 @@ li a:hover
 
 @media only screen and (max-device-width: 375px)
 {
-  .header
-  {
-    display: none;
-  }
-
-  .body-container
+  #body-container
   {
     height: 50%;
-    padding: 15px;
   }
 
-  .user-text
+  #body .user-text
   {
     width: 100%;
-    font-size: 2em;
   }
 
-  .user-image
+  #body .user-image
   {
+    display: inline-block;
     vertical-align: 0;
-    float: none;
-    margin-top: 0;
+    float: left;
+    margin: 0;
     max-width: 100%;
-  }
-
-  .footer
-  {
-    font-size: 2em;
-    padding: 50px;
-  }
-
-  .profile
-  {
-    display: none;
   }
 
   li
   {
     float:left;
     width: 100%;
-    box-shadow: 0px 1px 0px black;
+    box-shadow: 0px 2px 0px black;
   }
 
   li a
   {
-    font-size: 4em;
-    padding: 50px;
+    font-size: 50px;
   }
 
-  li a:hover
+  #profile
   {
-    border-color: black;
-    border-bottom: 2px;
+    padding-top: 50%;
+    width: 100%;
+    height: 180px;
   }
+
+  #profile h1
+  {
+    font-size: 90px;
+  }
+
+  #profile h2
+  {
+    font-size: 40px;
+  }
+
 
   h1
   {
