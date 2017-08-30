@@ -64,8 +64,6 @@
 
 #body .project-box{
   background-color: #F2F2F2;
-  outline: 1.5px solid #0075be;
-  outline-offset: -1.5px;
   height: 559px;
   width: 100%;
   display: -webkit-box;
@@ -146,6 +144,53 @@
 #body .user-text p{
   margin-top: 0;
   margin-bottom: 15px;
+}
+
+#portfolio .gallery-content{
+  width: 100%;
+  background-color: #F2F2F2;
+  font-size: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#portfolio .gallery-content div{
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.5);
+  margin: 10px;
+  -webkit-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+#portfolio .gallery-content div img{
+  width: 100%;
+  height: auto;
+  background-color: #F2F2F2;
+  -webkit-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+#portfolio .gallery-content div:hover{
+  outline: 1px solid #0075be;
+  outline-offset: : -1px;
+  -webkit-transform: scale(1.03);
+      -ms-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 div, section, footer, user-text, user-image{
@@ -269,25 +314,25 @@ p{
 }
 
 @media screen and (max-width: 750px){
+  #body-container{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   #body .project-box{
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    outline: none;
     height: auto;
   }
 
   #body .project-info{
     width: 100%;
     height: 100%;
-    outline: 1.5px solid #0075be;
-    outline-offset: -1.5px;
   }
 
   #body .project-image{
     width: 100%;
     height: 400px;
-    outline: 1.5px solid #0075be;
-    outline-offset: -1.5px;
   }
 
   #body .project-image iframe{
@@ -313,6 +358,12 @@ p{
 
   #body .user-image img{
     border-radius: 0;
+  }
+
+  #portfolio .gallery-content div{
+    width: auto;
+    height: 300px;
+    margin: 30px;
   }
 
   .centertext h1{
@@ -343,25 +394,26 @@ p{
       -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
   }
 
+  #portfolio .gallery-content div{
+    width: auto;
+    height: 200px;
+    margin: 30px;
+  }
+
   #body .project-box{
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    outline: none;
     height: auto;
   }
 
   #body .project-info{
     width: 100%;
     height: auto;
-    outline: 1.5px solid #0075be;
-    outline-offset: -1.5px;
   }
 
   #body .project-image{
     width: 100%;
     height: 256px;
-    outline: 1.5px solid #0075be;
-    outline-offset: -1.5px;
   }
 
   #body .project-image iframe{

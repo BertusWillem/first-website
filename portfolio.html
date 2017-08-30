@@ -3,7 +3,27 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Bas Klaassen - projecten</title>
+
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <!-- Add fancyBox -->
+    <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.7" type="text/css" media="screen" />
+    <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.7"></script>
+
+    <script type="text/javascript">
+    	$(document).ready(function() {
+        $(".fancybox")
+        .attr('rel', 'gallery')
+        .fancybox({
+          padding: 0,
+          arrows: false
+        });
+    	});
+    </script>
+
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="css/master.css">
   </head>
@@ -33,35 +53,17 @@
 
     <section id="body-container">
       <section id="body">
-
-        <section class="project1">
-          <div class="project-title">
-            <h1>Gametrain</h1>
-          </div>
-          <div class="project-box">
-            <div class="project-info">
-              <h2>Mijn aandeel:</h2>
-              <p> • User interface</p>
-              <p> • Graphics</p>
-              <p> • Animatie</p>
-              <p> • Logo</p>
-
-              <h2>Engine:</h2>
-              <p> • Unity3D</p>
-
-              <h2>Team:</h2>
-              <p> • 1 artist</p>
-              <p> • 3 programmeurs</p>
-
-              <h2>Platform:</h2>
-              <p> • Windows embedded</p>
-              <p> • Android</p>
-              <p> • <a href="https://tinyurl.com/yazaurvh">Ios</a></p>
-              <p> • Windows mobile</p>
-            </div>
-            <div class="project-image">
-              <iframe src="https://www.youtube.com/embed/sstgH024h2Q" frameborder="0" allowfullscreen></iframe>
-            </div>
+        <div class="project-title">
+          <h1>Instore kids corners template</h1>
+        </div>
+        <section id="portfolio">
+          <div class="gallery-content">
+            <div><a class=fancybox data-fancybox-type="iframe" href="pdf/Desktop_1920px_Hoofdmenu.pdf"><img src="http://i.imgur.com/CXcpoOc.jpg" alt=""/></a></div>
+            <div><a class=fancybox data-fancybox-type="iframe" href="pdf/Desktop_1920px_Menu.pdf"><img src="http://i.imgur.com/RQ4YF0e.jpg" alt=""/></a></div>
+            <div><a class=fancybox data-fancybox-type="iframe" href="pdf/Desktop_1920px_Productoverzicht.pdf"><img src="http://i.imgur.com/Qh1cT98.jpg" alt=""/></a></div>
+            <div><a class=fancybox data-fancybox-type="iframe" href="pdf/Desktop_1920px_Productpagina_noheader.pdf"><img src="http://i.imgur.com/eFQbCzD.jpg" alt=""/></a></div>
+            <div><a class=fancybox href="http://i.imgur.com/XBhiQyk.png"><img src="http://i.imgur.com/XBhiQyk.png" alt=""/></a></div>
+            <div><a class=fancybox href="http://i.imgur.com/wYF3FvN.jpg"><img src="http://i.imgur.com/wYF3FvN.jpg" alt=""/></a></div>
           </div>
         </section>
 
