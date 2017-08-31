@@ -36,6 +36,15 @@
   overflow: auto;
 }
 
+#body-container-text{
+  background-color: #FFF;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 5%;
+  padding-right: 5%;
+  overflow: auto;
+}
+
 #body{
   max-width: 1280px;
   margin-left: auto;
@@ -60,6 +69,7 @@
 
 #body .project-title h1{
   margin: 0;
+  font-size: .9em;
 }
 
 #body .project-box{
@@ -321,6 +331,11 @@ p{
   #body-container{
     padding-left: 0;
     padding-right: 0;
+  }
+
+  #body-container-text{
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   #body .project-box{
