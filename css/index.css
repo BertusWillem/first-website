@@ -1,0 +1,182 @@
+body{
+  z-index: 1;
+  background: #111;
+  font-family: 'Roboto', monospace;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-width: 256px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#home{
+  height: 100vh;
+}
+
+#home .header-background{
+  background: url(http://i.imgur.com/UdmiZdS.jpg) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  padding: 0;
+}
+
+#home .container{
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user-image{
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 25px;
+}
+
+.user-image img{
+  border-radius: 50%;
+  -webkit-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.22);
+          box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.22);
+}
+
+div, section, footer, user-text, user-image{
+  display: block;
+}
+
+header{
+  font-size: .9em;
+}
+
+.centertext h1{
+  margin: 0;
+  font-size: 3em;
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.22);
+}
+
+.centertext h2{
+  margin: 0;
+  font-size: 2em;
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.22);
+}
+
+.centertext{
+  color: white;
+  text-align: center;
+  z-index: 50;
+}
+
+p{
+  font-size: .9em
+}
+
+ul{
+  z-index: 100;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background-color: #151A1B;
+  -webkit-box-shadow: 0px 0px 2px 0px black;
+          box-shadow: 0px 0px 2px 0px black;
+}
+
+li{
+  z-index: 100;
+  position: -webkit-sticky;
+  position: sticky;
+  float:left;
+  width: 100%;
+}
+
+li a{
+  z-index: 100;
+  color: white;
+  font-size: .9em;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+li a:hover{
+  background-color: #0075be;
+}
+
+@media screen and (max-width: 750px){
+  .centertext h1{
+    font-size: 2em;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.22);
+  }
+
+  .centertext h2{
+    font-size: 1.2em;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.22);
+  }
+
+  .user-image img{
+    -webkit-box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.22);
+            box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.22);
+  }
+}
+
+@media only screen and (max-device-width: 425px){
+  html {
+      -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+  }
+
+  li a{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  li a:hover{
+    background-color: #151A1B;
+  }
+
+  ul{
+    bottom: 0;
+    position: sticky;
+  }
+
+  footer{
+    padding-top: 0;
+  }
+}
